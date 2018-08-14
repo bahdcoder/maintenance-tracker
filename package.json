@@ -1,0 +1,60 @@
+{
+  "name": "maintenance-tracker",
+  "version": "1.0.0",
+  "description": "a maintenance tracker app",
+  "main": "app.js",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "cors": "^2.8.4",
+    "cross-env": "^5.1.6",
+    "dotenv": "^5.0.1",
+    "eslint": "^4.19.1",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
+    "lodash.isempty": "^4.4.0",
+    "mocha": "^5.2.0",
+    "morgan": "^1.9.0",
+    "nyc": "^11.8.0",
+    "pg": "^7.4.3",
+    "validator": "^10.2.0",
+    "validatorjs": "^3.14.2",
+    "winston": "^2.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "coveralls": "^3.0.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "nodemon": "^1.17.4"
+  },
+  "scripts": {
+    "start": "babel-node server/app.js",
+    "start:dev": "set NODE_ENV=development&& nodemon --watch server --exec babel-node server/app.js",
+    "migrate": "set NODE_ENV=development&& babel-node server/models/index.js",
+    "db-migrate": "set NODE_ENV=test&&babel-node server/models/index.js",
+    "heroku-postbuild": "npm run migrate --env production",
+    "build": "babel server -d server/dist",
+    "test": "set NODE_ENV=test&& babel-node server/models/index.js && nyc --reporter=html --reporter=text mocha --compilers js:babel-register ./server/tests/ --timeout 10000 --exit",
+    "coveralls": "jscoverage lib && YOURPACKAGE_COVERAGE=1 nodeunit --reporter=lcov test | coveralls",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OKiMaureen/Maintenance-tracker.git"
+  },
+  "author": "maureen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OKiMaureen/Maintenance-tracker/issues"
+  },
+  "homepage": "https://github.com/OKiMaureen/Maintenance-tracker#readme"
+}

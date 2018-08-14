@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>maintenance tracker</title>
+  <link href="style.css" rel="stylesheet">
+  <!--google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Fugaz+One|PT+Sans+Narrow" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Righteous|Song+Myung" rel="stylesheet">
+  <!--font awesome -->
+  <script src="fontawesome-all.js"></script>
+</head>
+
+<body>
+  <!--navigation section-->
+  <header>
+    <nav>
+      <div class="nav-container">
+        <div class="btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <ul>
+        <li class="logo">
+          <a href="#">Maintenance Tracker</a>
+        </li>
+        <li>
+          <a href="allrequests.html"> my request</a>
+        </li>
+       </ul>
+    </nav>
+  </header>
+  <!--End navigation section-->
+  <!-- edit request Form  -->
+  <section class="request">
+    <article class="request-card">
+        <form class="request-form">
+            <h3>Edit Request</h3>
+            <br/>
+            <p class="messageSuccess" id ="createRequestE" ></p>
+            <p class="message" id ="createRequestS" ></p>
+            <input type="text" id="department" placeholder="Department" required>
+            <p class="message" id ="departmentE" ></p>
+            <br/>
+            <input type="text" id="equipment" placeholder="Equipment" required>
+            <p class="message" id ="equipmentE" ></p>
+            <br/>
+            <input type="text" id="serialNumber" placeholder="Serial Number" required>
+            <p class="message" id ="serialnumberE" ></p>
+            <br/>
+            <input type="text" id="requestTitle" placeholder="Request Title" required>
+            <p class="message" id ="titleE" ></p>
+            <br/>
+            <textarea name="requestDescription" id="requestDescription" cols="20" rows="5" placeholder="Request Description" required></textarea>
+            <p class="message" id ="descriptionE" ></p>
+            <br/>
+            <a class="button" id="editRequest">Submit</a>
+          </form>
+    </article>
+  </section>
+  <!--End edit request form-->
+
+  <!--Footer Section -->
+  <footer>
+    <p>Copyright &copy;Maintenance Tracker 2018. All rights reserved.</p>
+  </footer>
+  <!--Footer Section End -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <script src="scripts/user_edit_request.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>maintenance tracker</title>
+  <link href="style.css" rel="stylesheet">
+  <!--google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Fugaz+One|PT+Sans+Narrow" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Righteous|Song+Myung" rel="stylesheet">
+  <!--font awesome -->
+  <script src="fontawesome-all.js"></script>
+</head>
+
+<body>
+  <!--navigation section-->
+  <header>
+    <nav>
+      <div class="nav-container">
+        <div class="btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <ul>
+        <li class="logo">
+          <a href="#">Maintenance Tracker</a>
+        </li>
+        <li>
+          <a href="adminrequests.html">all requests</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!--End navigation section-->
+
+  <!--user details page -->
+  <section class="details-requests" >
+      <p id="requestMsg"></p>
+      <div class="detailsrequest-card" id="detailsRequest">
+      <div class="status">
+          <button class="green" id ="approve" title="approve">Approve</button>
+          <button class="red" id="disapprove" title="disapprove">Disapprove</button>
+
+          <button class="green" id="resolve" title="resolve">Resolve</button>
+        </div>
+      </div>
+      </section>
+  <!-- end of user details page -->
+   <!--Footer Section -->
+   <footer>
+      <p>Copyright &copy;Maintenance Tracker 2018. All rights reserved.</p>
+    </footer>
+    <!--Footer Section End -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="scripts/admin_get_single_request.js"></script>
+</body>
+</html>

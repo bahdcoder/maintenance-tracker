@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>maintenanance tracker</title>
+  <!--main css -->
+  <link href="style.css" rel="stylesheet">
+  <!--google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Fugaz+One|PT+Sans+Narrow" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Righteous|Song+Myung" rel="stylesheet">
+  <!--font awesome -->
+  <script src="fontawesome-all.js"></script>
+</head>
+
+<body>
+  <!--navigation section-->
+  <header>
+    <nav>
+      <div class="nav-container">
+        <div class="btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <ul>
+        <li class="logo">
+          <a href="#">Maintenance Tracker</a>
+        </li>
+        <li class="dropdown">
+          <select class="dropbtn" id="filter">
+          <option value>Filter By:</option>
+          <option value="all">all</option>
+          <option value="pending">pending</option>
+          <option value="approved">approved</option>
+          <option value="disapproved">disapproved</option>
+          <option value="resolved">resolved</option>
+          </select>
+      </li>
+        <li>
+          <a href="index.html">home</a>
+        </li>
+        <li>
+          <a href="adminrequest.html" class="current">All Requests</a>
+        </li>
+        <li>
+          <a href="index.html">sign out</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!--End navigation section-->
+  <!--All Request Section -->
+  <section class="allrequests" id ="allRequests">
+      <p id="requestErr"></p>
+  </section>
+  <!--End of All Request Section -->
+  <!--Footer Section -->
+  <footer>
+    <p>Copyright &copy;Maintenance Tracker 2018. All rights reserved.</p>
+  </footer>
+  <!--Footer Section End -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <script src="scripts/admin_get_requests.js"></script>
+</body>
+
+</html>

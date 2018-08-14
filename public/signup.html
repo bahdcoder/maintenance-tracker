@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>maintenance tracker</title>
+  <link href="style.css" rel="stylesheet">
+  <!--google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Fugaz+One|PT+Sans+Narrow" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Righteous|Song+Myung" rel="stylesheet">
+  <!--font awesome -->
+  <script src="fontawesome-all.js"></script>
+</head>
+
+<body>
+  <!--navigation section-->
+  <header>
+    <nav>
+      <div class="nav-container">
+        <div class="btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <ul>
+        <li class="logo">
+          <a href="#">Maintenance Tracker</a>
+        </li>
+        <li>
+          <a href="index.html">home</a>
+        </li>
+       </ul>
+    </nav>
+  </header>
+  <!--End navigation section-->
+
+  <!-- Signup Form  -->
+  <section class="form">
+    <article class="card">
+      <form id ="signupForm">
+        <h3>Sign Up</h3>
+        <p id= "existingmsg" class="existing"></p>
+        <br/>
+        <input type="text" id="name" placeholder="Name" required>
+        <p class="message" id ="namemsg" ></p>
+        <br/>
+        <input type="text" id="email" placeholder="Email" required>
+        <p class="message" id ="emailmsg" ></p>
+        <br/>
+        <input type="password" id="password" placeholder="Password" required>
+        <p class="message" id ="passwordmsg" ></p>
+        <br/>
+        <a class="button" id="signupBtn">Sign Up</a>
+
+        <p>Already have an account?
+          <a  href="signin.html"> Sign In</a>
+          </li>
+        </p>
+      </form>
+    </article>
+  </section>
+  <!--End signup form-->
+
+  <!--Footer Section -->
+  <footer>
+    <p>Copyright &copy;Maintenance Tracker 2018. All rights reserved.</p>
+  </footer>
+  <!--Footer Section End -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <script src="scripts/signup.js"></script>
+</body>
+
+</html>
