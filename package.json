@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "bcrypt": "^2.0.1",
@@ -29,23 +30,34 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "coveralls": "^3.0.1",
+    "css-loader": "^1.0.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.8.2",
-    "nodemon": "^1.17.4"
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.17.4",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
   },
   "scripts": {
     "start": "babel-node server/app.js",
     "start:dev": "set NODE_ENV=development&& nodemon --watch server --exec babel-node server/app.js",
     "migrate": "set NODE_ENV=development&& babel-node server/models/index.js",
     "db-migrate": "set NODE_ENV=test&&babel-node server/models/index.js",
-    "heroku-postbuild": "npm run migrate --env production",
-    "build": "babel server -d server/dist",
+    "heroku-postbuild": "npm run migrate --env production && npm run build",
+    "build": "babel server -d dist",
     "test": "set NODE_ENV=test&& babel-node server/models/index.js && nyc --reporter=html --reporter=text mocha --compilers js:babel-register ./server/tests/ --timeout 10000 --exit",
     "coveralls": "jscoverage lib && YOURPACKAGE_COVERAGE=1 nodeunit --reporter=lcov test | coveralls",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "build:client": "NODE_ENV=development webpack",
+    "start:client": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
